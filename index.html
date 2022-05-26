@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="./bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style>
+			body {
+				/* font-family: "Brush Script MT", cursive; */
+				font-size: 14px;
+				transition: 1s all;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+
+				font-family: 'Aladin', cursive;
+			}
+
+			.navbar {
+				background: rgba(255, 255, 255, 0);
+				border-top: 0;
+				border-bottom: 0;
+				padding-top: 20px;
+			}
+
+			.toubu {
+
+				background: url(./img/banner.jpg) no-repeat center;
+				background-size: cover;
+				min-height: 799px;
+				position: relative;
+			}
+
+			.navbar-collapse {
+				border-top: 0;
+
+
+			}
+
+			.navbar-default .navbar-toggle .icon-bar {
+				background-color: #fff;
+			}
+
+			.daohan {
+				width: 500px;
+				height: 50px;
+				padding: 0;
+				display: flex;
+
+				color: #df6161;
+			}
+
+			.daohan a {
+				color: #df6161;
+			}
+
+			.navbar-default .navbar-toggle {
+				background: #df6161;
+
+				border-color: #fff;
+			}
+
+			.lbtu {
+				width: 100%;
+				margin-top: -10%;
+			}
+
+
+			.container-fluid {
+				padding: 0;
+
+				overflow: hidden;
+			}
+
+			.nav {
+				position: relative;
+
+			}
+
+			.nav li a {
+				width: 100%;
+				line-height: 50px;
+				padding: 0;
+				font-size: 1.1em;
+			}
+
+			.nav li a::before,
+			.nav li a::after {
+				display: block;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				border-radius: 2px;
+				transform: scale3d(0, 1, 1);
+				transform-origin: center left;
+				transition: transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+				bottom: 0;
+			}
+
+			.nav li a:hover::before {
+				transition: transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+				transform: none;
+
+			}
+
+			.nav li a:hover {
+				color: #d94f5c;
+			}
+
+			.nav li a::before {
+
+				transition-delay: 0.4s;
+				background: #d94f5c;
+			}
+
+			.nav li a::after {
+				background: #d94f5c;
+			}
+
+			.navbar-default .navbar-nav>li>a {
+				color: #fff;
+			}
+
+			.navbar-default .navbar-nav>li>a:hover {
+				color: #fff;
+			}
+
+			.navbar-nav {
+				width: 60%;
+				float: right;
+				margin-right: 80px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			#homes {
+				color: #d94f5c;
+			}
+
+			.modal-body {
+				height: 300px;
+			}
+
+			.bookbtn {
+				width: 100px;
+				height: 35px;
+				border-radius: 5px;
+				margin-top: 8px;
+				border: none;
+				color: #fff;
+				background: rgba(0, 0, 0, 0.6);
+				transition: .5s;
+			}
+
+			.bookbtn:hover {
+				background: #d94f5c;
+				color: #fff;
+
+			}
+
+			.guando {
+				width: 100%;
+				height: 400px;
+				position: absolute;
+				top: 150px;
+				left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+			}
+
+			.moerabout {
+				width: 10em;
+				height: 3em;
+				text-align: center;
+				line-height: 3em;
+				position: absolute;
+				left: 46%;
+				bottom: 20%;
+				background: rgba(0, 0, 0, 0.6);
+				transform: perspective(1px) translateZ(0);
+				transition-property: color;
+				transition-duration: 0.3s;
+			}
+
+			.moerabout:before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: #d94f5c;
+				transform: scaleY(0);
+				transform-origin: 50%;
+				transition-property: transform;
+				transition-duration: 0.3s;
+				transition-timing-function: ease-out;
+			}
+
+			.moerabout:hover:before {
+				transform: none;
+			}
+
+			.pervimg {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				right: auto;
+				left: 18%;
+				background: #EA172B;
+				opacity: .7;
+				border-radius: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.pervimg img {
+				width: 25px;
+				height: 25px;
+				margin-left: -8px;
+			}
+
+			.nextimg {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: auto;
+				right: 18%;
+				background: #EA172B;
+				opacity: .7;
+				border-radius: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.nextimg img {
+				width: 25px;
+				height: 25px;
+				margin-right: -8px;
+			}
+
+			.wanzuo {
+				position: absolute;
+				left: 20%;
+				top: 50%;
+			}
+
+			.wanyou {
+				position: absolute;
+				right: 20%;
+				top: 50%;
+			}
+
+			.guando-on {
+				width: 40%;
+				height: 70%;
+				background: rgba(38, 38, 38, 0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+
+			.item {
+				position: absolute;
+				transition: all 1s;
+				opacity: 0;
+			}
+
+			.item p {
+				font-size: 2.5em;
+			}
+
+			.item h5 {
+				margin: 0 80px;
+				font-size: 1em;
+			}
+
+			.about {
+
+				height: 500px;
+				margin-top: 80px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.about h1 {
+				height: 60px;
+				color: #d94f5c;
+				font-weight: 600;
+			}
+
+			.about h4 {
+				width: 800px;
+				height: 70px;
+				margin: 0 auto;
+				border-bottom: 2px #df6161 dashed;
+				padding-bottom: 1em;
+
+			}
+
+			.about h5 {
+				width: 760px;
+				height: 70px;
+				margin: 0 auto;
+				padding-top: 30px;
+			}
+
+			.hangao {
+				margin: 20px;
+			}
+
+			.tupian {
+				width: 300px;
+				height: 100%;
+			}
+
+			.abottup {
+				width: 1000px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.abottup div {
+				overflow: hidden;
+				cursor: pointer;
+				box-sizing: border-box;
+
+			}
+
+			.abottup-img {
+				width: 300px;
+				height: 200px;
+				transition: .5s all;
+				-webkit-transition: .5s all;
+				cursor: pointer;
+				position: relative;
+			}
+
+			.abottup div:hover .ourtrip {
+				opacity: 1;
+				z-index: 1;
+			}
+
+			.abottup-img:hover {
+				transform: scale(1.4);
+				-webkit-transform: scale(1.4);
+			}
+
+
+			.ourtrip {
+				position: absolute;
+				top: 43%;
+				left: 33%;
+				font-size: 2em;
+				opacity: 0;
+				transition: .5s all;
+				z-index: -1;
+				color: #fff;
+			}
+
+			.our {
+				width: 100%;
+				height: 450px;
+				background: url(./img/bg1.jpg) no-repeat center fixed;
+				background-size: cover;
+			}
+
+			.ourfurs h1 {
+				margin-top: 2em;
+				color: #d94f5c;
+			}
+
+			.ourfeatu {
+				margin-top: 3em;
+				display: flex;
+				justify-content: space-between;
+				color: #fff;
+			}
+
+			.ourfeatuers {
+				width: 500px;
+				height: 300px;
+				position: relative;
+				z-index: 0;
+
+			}
+
+			.ourfeatuers-on {
+				height: 50px;
+				margin-bottom: 20px;
+			}
+
+			.ourfeatuers-on p {
+				font-size: 1.1em;
+			}
+
+			.ourneir {
+				width: 0%;
+				height: 8px;
+				background: red;
+			}
+
+			.thin {
+				margin-bottom: 5em;
+				transition: width 1s;
+				transition: .5;
+			}
+
+			.ourneir:nth-child(1) {
+				background: #e78d1f;
+			}
+
+			.thin,
+			.ourneir::before {
+				display: block;
+				content: '';
+				position: absolute;
+				z-index: -1;
+				width: 100%;
+				height: 8px;
+				border-radius: 2px;
+				background: #e4e4E4;
+			}
+
+			.servi {
+				padding: 50px;
+				color: #d94f5c;
+				font-weight: 600;
+			}
+
+			.service {
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.services {
+				width: 200px;
+				height: 200px;
+
+			}
+
+			.services div {
+				font-weight: 600;
+				font-size: 1.1em;
+			}
+
+			.services h4 img {
+				margin-right: 20px;
+			}
+
+			.services h5 {
+				line-height: 1.8em;
+				text-indent: 1em;
+			}
+
+			/* entire container, keeps perspective */
+			.flip-container {
+				perspective: 1000;
+			}
+
+			/* flip the pane when hovered */
+			.flip-container:hover .flipper,
+			.flip-container.hover .flipper {
+				transform: rotateY(360deg);
+
+			}
+
+			.flip-container,
+			.front,
+			.back {
+				width: 34px;
+				height: 32px;
+			}
+
+			/* 反转速度 */
+			.flipper {
+				transition: 0.6s;
+				transform-style: preserve-3d;
+
+				position: relative;
+			}
+
+			/* 隐藏背后的窗口在交换*/
+			.front,
+			.back {
+				backface-visibility: hidden;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			/* 前面的窗口放置后面*/
+			.front {
+				z-index: 2;
+
+			}
+
+			/* 返回最初的隐藏窗口 */
+			.back {
+				transform: rotateY(180deg);
+
+			}
+
+			.cum {
+				background: url(./img/toux.png) no-repeat;
+			}
+
+			.cumtxt {
+				margin: -20px -20px 0 0;
+			}
+
+			.nobis {
+				background: url(./img/feiji.png) no-repeat;
+				width: 36px;
+			}
+
+			.nobistxt {
+				margin: -20px -20px 0 0;
+			}
+
+			.est {
+				background: url(./img/zan.png) no-repeat;
+			}
+
+			.esttxt {
+				margin: -20px -20px 0 0;
+			}
+
+			.soluta {
+				background: url(./img/daoc.png) no-repeat;
+			}
+
+			.solutatxt {
+				margin: -20px -20px 0 0;
+			}
+
+			.msoluta {
+				background: url(./img/lianj.png) no-repeat;
+			}
+
+			.msolutatxt {
+				margin: -20px -20px 0 0;
+			}
+
+			.nobises {
+				background: url(./img/lu.png) no-repeat;
+			}
+
+			.nobisestxt {
+				margin: -20px -20px 0 0;
+			}
+
+
+			.cum:hover {
+				background: url(./img/toux-on.png) no-repeat;
+			}
+
+			.nobis:hover {
+				background: url(./img/feiji-on.png) no-repeat;
+			}
+
+			.est:hover {
+				background: url(./img/zan-on.png) no-repeat;
+			}
+
+			.soluta:hover {
+				background: url(./img/daoc-on.png) no-repeat;
+			}
+
+			.msoluta:hover {
+				background: url(./img/lianj-on.png) no-repeat;
+			}
+
+			.nobises:hover {
+				background: url(./img/lu-on.png) no-repeat;
+			}
+
+
+			.meetourteam {
+				background: url(./img/bg1.jpg) no-repeat center fixed;
+				background-size: cover;
+			}
+
+			#meet {
+				height: 300px;
+				position: relative
+			}
+
+			.meetour span {
+				margin: 0 .5em;
+			}
+
+			.meet {
+				width: 1000px;
+				height: 100%;
+				position: absolute;
+				transition: all 1s;
+				opacity: 0;
+				list-style: none;
+				left: 4%;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.meet-list {
+				width: 200px;
+				height: 260px;
+				border: 10px solid #404040;
+				position: relative;
+				background: #fff;
+				overflow: hidden;
+				z-index: 99;
+				transition: all .5s;
+			}
+
+			.meet-img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all .9s;
+				-webkit-transition: .9s all;
+				z-index: 999;
+			}
+
+			.meet-icn {
+				height: 41px;
+				transition: all .5s;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 999;
+			}
+
+			.meet-icn div {
+				width: 41px;
+				height: 41px;
+				background: #000;
+				margin: 0 5px;
+			}
+
+			.meet-icn div:hover {
+				background: #E3535D;
+				transition: all .5s;
+			}
+
+			.meetour {
+				height: 560px;
+			}
+
+			.meetour h1 {
+				font-size: 3em;
+				margin: 1.5em;
+
+			}
+
+			.meet-niao {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: #000;
+				background: url(./img/social-icons.png);
+				background-position: 0px 0px;
+			}
+
+			.meet-bf {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: url(./img/social-icons.png);
+				background-position: 0px -48px;
+
+			}
+
+			.meet-gj {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: url(./img/social-icons.png);
+				background-position: 2px -95px;
+				box-sizing: border-box;
+			}
+
+
+			.meet .meet-list:hover .meet-img {
+				top: -260px;
+				transition: all .9s;
+				-webkit-transition: .9s all;
+			}
+
+
+			.portxfolio {
+
+				padding: 0 15px;
+				margin-bottom: 5em;
+			}
+
+			.portxfolio h1 {
+				font-weight: bold;
+				font-size: 3.3em;
+				height: 90px;
+				line-height: 90px;
+				margin: 5% 0;
+			}
+
+			.portfoli {
+				font-size: .7em;
+				list-style: none;
+				display: flex;
+				justify-content: center;
+			}
+
+			.portfoli li a {
+				text-decoration: none;
+				outline: none;
+				resize: none;
+				border: none;
+				color: #2f2f2f;
+				font-weight: bold;
+			}
+
+			.portfoli li a:hover {}
+
+			.portfoli li {
+				margin: 0 2.5em;
+				outline: none;
+			}
+
+			.nav-tabs {
+				border-bottom: none;
+
+			}
+
+			.nav-tabs>li.active>a,
+			.nav-tabs>li.active>a:focus,
+			.nav-tabs>li.active>a:hover {
+				border: none;
+				color: #d94f5c;
+			}
+
+
+
+			.tab-pane{
+				padding: 15px;
+			}
+			
+			.port {
+				padding-top: 28px;
+				display: flex;
+				justify-content: space-between;
+				
+			}
+			
+			.port div {
+				width: 347px;
+				height: 300px;
+				overflow: hidden;
+				position: relative;
+			}
+			.port .imgmax{
+				width: 727px;
+				height: 300px;
+				transition: .5s all;
+				-webkit-transition: .5s all;
+			}
+			.port .imgmax .port-tet{
+				width: 727px;
+				height: 300px;
+				transition: .5s all;
+				-webkit-transition: .5s all;
+			}
+		
+
+			.port-img {
+				width: 347px;
+				height: 300px;
+				transition: .5s all;
+				-webkit-transition: .5s all;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			.port-imgmax {
+				width: 727px;
+				height: 300px;
+				transition: .5s all;
+				-webkit-transition: .5s all;
+				position: absolute;
+				left: 0%;
+				top: 0%;
+			}
+			.port-tet{
+				position: absolute;
+				bottom: -100%;
+				background: rgb(0, 0,0,0.5);
+				transition: .5s all;
+				-webkit-transition: .5s all;
+				text-align: center;
+				line-height:300px;
+			}
+			
+			.port-tet p{
+				font-size: 2.5em;
+				color: #fff;
+				margin: 0;
+			}
+
+			.port div:hover .port-img {
+				width: 150%;
+				height: 150%;
+				left: -25%;
+				top: -25%;
+			}
+			
+			.port div:hover .port-tet {
+				bottom: 0;
+
+			}
+
+			.port div:hover .port-imgmax {
+				width: 150%;
+				height: 150%;
+				left: -25%;
+				top: -25%;
+			}
+
+			.late {
+				height: 360px;
+				background: url(./img/bg2.jpg) no-repeat fixed center;
+				background-size: cover;
+			}
+
+			.latest {
+				height: 300px;
+				color: #dedede;
+			}
+
+			.late .latest div a {
+				margin-top:7% ;
+				border: 2px solid #fff;
+			}
+
+			.late .latest div:nth-child(1) {
+				display: flex;
+				justify-content: center;
+			}
+
+			.late .latest div a {
+				width: 50px;
+				height: 50px;
+				background-color: transparent;
+				background-position: 5px 4px;
+			}
+
+			.latest div a {
+				background: url(./img/social-icons.png);
+				display: block;
+				transition: .5s all;
+			}
+
+			.latest h4 {
+				margin: 40px 0;
+				position: relative;
+				box-sizing: border-box;
+				color: #D2D2D2;
+			}
+
+			.latest h4:before {
+				display: block;
+				content: '';
+				position: absolute;
+				width: 60px;
+				height: 1.5px;
+				bottom: -120%;
+				left: 47.5%;
+				background: #b1b1b1;
+
+			}
+
+			.latest-on {
+
+				margin-top: 3em;
+				display: flex;
+				justify-content: center;
+			}
+
+			.latestfrom {
+				width: 750px;
+
+			}
+
+
+			.contact {
+				width: 700px;
+				height: 650px;
+			}
+
+			.contact h1 {
+				color: #d94f5c;
+				margin: 10% 0 3% 0;
+			}
+			.contact div p{
+				font-size: 0.9em;
+				font-weight:bold;
+				color: #999;
+			}
+			.contactinput {
+				margin-top: 50px;
+			}
+
+			.contact-ipt {
+				display: flex;
+				justify-content: space-between;
+
+			}
+
+			.contact-ipt input {
+				width: 300px;
+				height: 30px;
+				color: #999;
+				padding-left: 10px;
+				margin-bottom: 30px;
+				outline: none;
+				border: none;
+				border-bottom: 1px #67625d solid;
+			}
+
+			.contact-ipton input {
+				width: 100%;
+				height: 30px;
+				padding-left: 10px;
+				margin-bottom: 30px;
+				outline: none;
+				border: none;
+				border-bottom: 1px #67625d solid;
+			}
+
+			.contact-textarea textarea {
+				resize: none;
+				outline: none;
+				width: 100%;
+				height: 100px;
+				padding-left: 10px;
+
+				margin-bottom: 10px;
+				border: none;
+				border-bottom: 1px #67625d solid;
+			}
+
+			.contact-btn {
+				width: 200px;
+				height: 40px;
+				background: #E3535D;
+				border: 2px #E3535D solid;
+				outline: none;
+				color: #fff;
+				font-size: 1em;
+				transition: .5s all;
+			}
+
+			.contact-btn:hover {
+				background: #fff;
+				color: #E3535D;
+			}
+
+			.lianxi {
+				height: 70px;
+				line-height: 70px;
+				background: #bfbfbf;
+
+			}
+
+			.lianxi div {
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.lianxi div span i {
+				width: 230px;
+				font-family: 'Aladin', cursive;
+				margin-right: 10px;
+				font-size: 1.5em;
+				color: #E3535D;
+			}
+
+			.lianxi div span img {
+				width: 1.5em;
+				height: 1.5em;
+				margin-right: 10px;
+			}
+
+			.lianxi div span .youx {
+				width: 2em;
+				height: 1.5em;
+			}
+
+			.lntera {
+				background: #000000;
+				
+			}
+			.lntera p{
+				
+				display: block;
+				font-size: 1.5em;
+				margin: 0;
+				padding: 20px 0;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				line-height: 40px;
+			}
+			.lntera p img{
+				display: block;
+				margin:0 0 0 10px;
+				width: 40px;
+				height: 40px;
+				
+				
+			}
+
+			.well{
+				min-height: 300px;
+				padding: 0;
+				margin: 0;
+				border: none;
+				border-radius: 0;
+				box-shadow: none;
+			}
+			.vacation {
+				height: 300px;
+				background: #363636;
+				color: #fff;
+				padding-top: 40px;
+			}
+
+			.vacation:nth-child(1) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+
+			.vacation span {
+				display: block;
+				margin: 1em 0;
+				font-size: 1.1em;
+			}
+
+			.vacation span a {
+				color: #E3535D;
+				transition: .5s all;
+				outline: none;
+				text-decoration: none;
+			}
+
+			.vacation span a:hover {
+				color: #fff;
+			}
+
+			.vacation-on {
+				width: 200px;
+				height: 41px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: absolute;
+				left: 44.5%;
+				margin-top: 1em;
+			}
+
+			.vacation-on div {
+				width: 41px;
+				height: 41px;
+				background: #000;
+
+			}
+
+			.vacation-on div .niao {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: url(./img/social-icons.png);
+				background-position: 0px 0px;
+			}
+
+			.bf {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: url(./img/social-icons.png);
+				background-position: 0px -48px;
+			}
+
+			.gj {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: url(./img/social-icons.png);
+				background-position: 2px -95px;
+				box-sizing: border-box;
+			}
+
+			.qiu {
+				width: 41px;
+				height: 41px;
+				display: block;
+				background: url(./img/social-icons.png);
+				background-position: 0px -144px;
+
+			}
+
+			.totop {
+				opacity: 0;
+				transition: .5s all;
+				position: fixed;
+				bottom: 3%;
+				right: 3%;
+				overflow: hidden;
+				width: 48px;
+				height: 48px;
+				border: none;
+				text-indent: 100%;
+				background: url(./img/move-up.png) no-repeat 0px 0px;
+				z-index: 999;
+			}
+
+			/* mix-width 1400 */
+			@media (max-width:1400px) {
+				.toubu {
+					min-height: 750px;
+				}
+
+				.guando {
+					top: 130px;
+				}
+
+				.item p {
+					font-size: 2.4em;
+				}
+
+				.item h5 {
+					margin: 0 80px;
+					font-size: .9em;
+				}
+			}
+
+			/* mix-width 1200 */
+			@media (max-width:1200px) {
+				.toubu {
+					min-height: 700px;
+				}
+
+				.guando {
+					top: 110px;
+				}
+
+				.item p {
+					font-size: 2.3em;
+				}
+
+				.item h5 {
+					margin: 0 80px;
+					font-size: .8em;
+				}
+			}
+
+			/* mix-width 1000 */
+			@media (max-width:1000px) {
+				.toubu {
+					min-height: 650px;
+				}
+
+				.guando {
+					top: 100px;
+				}
+
+				.item p {
+					font-size: 2.2em;
+				}
+
+				.item h5 {
+					margin: 0 80px;
+					font-size: .8em;
+				}
+			}
+
+			/* mix-width 900 */
+			@media (max-width:900px) {
+				.toubu {
+					min-height: 600px;
+				}
+
+				.guando {
+					top: 90px;
+				}
+
+				.item p {
+					font-size: 2em;
+				}
+
+				.item h5 {
+					margin: 0 80px;
+					font-size: .8em;
+				}
+			}
+
+			/* mix-width 800 */
+			@media (max-width:800px) {
+				.toubu {
+					min-height: 550px;
+				}
+
+				.guando {
+					top: 80px;
+				}
+
+				.item p {
+					font-size: 1.8em;
+				}
+
+				.item h5 {
+					margin: 0 80px;
+					font-size: .7em;
+				}
+			}
+
+			/* mix-width 768 */
+			@media (max-width:768px) {
+				.item h2 {
+					font-size: 1.6em;
+					transition: .5s;
+				}
+
+				div#bs-example-navbar-collapse-1 {
+					background: #000;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+					left: 6%;
+					width: 87%;
+					z-index: 999;
+
+
+				}
+
+				div#bs-example-navbar-collapse-1 .nav {
+					float: none;
+					display: block;
+					text-align: center;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.modal-backdrop {
+					z-index: 0;
+				}
+
+				.toubu {
+					min-height: 500px;
+				}
+
+				.guando {
+					top: 80px;
+				}
+
+				.item p {
+					font-size: 1.4em;
+				}
+
+				.item h5 {
+					margin: 0 80px;
+					font-size: .6em;
+				}
+			}
+
+			/* mix-width 700 */
+			@media (max-width:700px) {
+				.toubu {
+					min-height: 450px;
+				}
+
+				.item p {
+					font-size: 1.2em;
+				}
+
+				.guando {
+					top: 70px;
+				}
+			}
+
+			/* mix-width 650 */
+			@media (max-width:650px) {
+				.toubu {
+					min-height: 400px;
+				}
+
+				.item p {
+					font-size: 1em;
+				}
+
+				.guando {
+					top: 60px;
+				}
+			}
+
+			/* mix-width 600 */
+			@media (max-width:600px) {
+				.toubu {
+					min-height: 360px;
+				}
+			}
+		</style>
+		<script>
+			onload = function() {
+				var li = document.getElementById('box').getElementsByTagName('div');
+				var index = 0;
+				goto();
+
+				function goto() {
+					for (var i = 0; i < li.length; i++) {
+						li[i].style.opacity = 0;
+					}
+					if (index == li.length) index = 0;
+					li[index++].style.opacity = 1;
+
+				}
+				setInterval(goto, 3000);
+
+				var meet = document.getElementById('meet').getElementsByClassName('meet')
+				// var span = document.getElementById('meetour').getElementsByTagName('span');
+				var index = 0;
+				gotoOn();
+
+				function gotoOn() {
+
+					for (var i = 0; i < meet.length; i++) {
+						meet[i].style.opacity = 0;
+						// span[i].style.background = '#fff'
+
+					}
+					if (index == meet.length) index = 0;
+					meet[index++].style.opacity = 1;
+				}
+				setInterval(gotoOn, 3000);
+
+			}
+			var kg = true;
+			$(function() {
+				$('.portfoli').click(function() {
+					console.log(1)
+				});
+			})
+			$(function() {
+
+				$('.totop').on({
+					click: function() {
+						$("html").animate({
+							scrollTop: 0
+						}, 400)
+					}
+				})
+			})
+			$(function() {
+				var opaci = 1
+				$(window).scroll(function() {
+					let srcllTop = $(window).scrollTop()
+					if (srcllTop > 230) {
+						$(".totop").css("opacity", opaci)
+					} else if (srcllTop < 230) {
+						$(".totop").css("opacity", "0")
+					}
+
+
+				})
+			$('.lntera').click(function(){
+					if(kg){
+						$('.lntera p img').attr("src",'./img/top.png')
+					}else{
+						$('.lntera p img').attr("src",'./img/xia.png')
+					}
+					kg = !kg;
+				})
+			})
+			
+		</script>
+	</head>
+	<body>
+		<div class="toubu">
+
+			<!-- 导航 -->
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand animate__animated animate__fadeInUp" style="margin-left: 50px;"
+							href="#">Vacation</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse text-center " id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a id="homes" href="#" class="col-md-2">Home</a></li>
+							<li><a href="#about" class="col-md-2">About</a></li>
+							<li><a href="#" class="col-md-2">Services</a></li>
+							<li><a href="#" class="col-md-2">Portfolio</a></li>
+							<li><a href="#" class="col-md-2">Contact</a></li>
+							<li>
+								<button type="button" class="bookbtn" data-toggle="modal" data-target="#myModal">Book
+									Now</button>
+
+							</li>
+
+						</ul>
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default"
+											data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary">Save changes</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</nav>
+
+
+			<!-- 轮播图 -->
+			<header>
+				<div class="container-fluid">
+					<div class="guando">
+						<div id="box" class="guando-on container text-center">
+							<div class="item ">
+								<p class="animate__animated animate__zoomIn">MAGICAL MYSTERY TOUR</p>
+								<h5 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam Lorem
+									Ipsum was popularised In sit amet sapien eros
+									Integer dolore magna aliqua</h5>
+							</div>
+							<div class="item">
+								<p class="animate__animated animate__zoomIn">AMAZING HOLLYWOOD NIGHTS</p>
+								<h5 class="animate__animated animate__fadeInDown">In sit amet sapien eros Integer
+									dolore magna aliqua Temporibus lorem lpsum was
+									popularised autem quibusdamMore About</h5>
+							</div>
+							<div class="item">
+								<p class="animate__animated animate__zoomIn">WHAT A WONDERFUL WORLD</p>
+								<h5 class="animate__animated animate__fadeInDown">Lorem Ipsum was popularised In sit
+									amet sapien eros Integer dolore magna aliqua
+									Temporibus autem quibusdam</h5>
+							</div>
+						</div>
+						<div class="moerabout" data-text="More About">
+							More About
+						</div>
+						<span class="pervimg"><img src="./img/prev.png" alt=""></span>
+						<span class="nextimg"><img src="./img/next.png" alt=""></span>
+					</div>
+
+				</div>
+		</div>
+		</header>
+
+		<!-- 滚动到顶部 -->
+		<div class="totop">
+
+		</div>
+
+		<!-- About Us -->
+		<div id="about" class="container  about text-center">
+			<h1 class="hangao animate__animated animate__fadeInDown">About Us</h1>
+			<h4 class="hangao text-center animate__animated animate__fadeInDown">Nulla at dolor at ipsum convallis
+				pulvinar a non nunc non leo sollicitudin, tincidunt
+				odio a, rutrum ligula aliquam orci cursus facilisis maximus</h4>
+			<h5 class="hangao animate__animated animate__fadeInUp"><small>Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Integer gravida mauris
+					non mi gravida, at sollicitudin odio efficitur. Mauris ex nulla, aliquam ornare facilisis nec
+					convallis pulvinar a non nunc non leo sollicitudin</small></h5>
+			<div class="abottup hangao">
+				<div>
+					<div class="abottup-img">
+						<img src="./img/img1.jpg" class="  img-responsive tupian animate__animated animate__backInLeft"
+							alt="">
+						<div class="ourtrip">
+							<span>Our Trip</span>
+						</div>
+					</div>
+
+				</div>
+				<div>
+					<div class="abottup-img">
+						<img src="./img/img2.jpg" class=" img-responsive tupian animate__animated animate__zoomIn"
+							alt="">
+						<div class="ourtrip">
+							<span>Our Trip</span>
+						</div>
+					</div>
+
+				</div>
+
+				<div>
+					<div class="abottup-img">
+						<img src="./img/img3.jpg" class=" img-responsive  tupian animate__animated animate__backInRight"
+							alt="">
+						<div class="ourtrip">
+							<span>Our Trip</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+		<!-- Our Features -->
+		<div class="our">
+			<div class="container ">
+				<div class="ourfurs">
+					<h1 class="text-center animate__animated animate__fadeInDown">Our Features</h1>
+				</div>
+				<div class="ourfeatu">
+					<div class="col-md-6 pull-right ourfeatuers">
+						<div class="ourfeatuers-on">
+							<p>Best Price</p>
+							<div class="progress ourneir thin">
+								<div class="progress-bar probest" role="progressbar" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100" style="width: 60%;background: #e7a319;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="ourfeatuers-on">
+							<p>Enjoyment</p>
+							<div class="progress ourneir thin">
+								<div class="progress-bar proenj" role="progressbar" aria-valuenow="100"
+									aria-valuemin="0" aria-valuemax="100" style="width: 100%; background: #ebb445;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>
+						</div>
+						<div class="ourfeatuers-on">
+							<p>Trust & Safety</p>
+							<div class="progress ourneir thin">
+								<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width: 70%; background: #ecdc24;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 pull-right ourfeatuers">
+						<div class="ourfeatuers-on">
+							<p>Planning Tours</p>
+							<div class="progress ourneir thin">
+								<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+									aria-valuemax="100" style="width: 100%; background: #e7a319;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>
+						</div>
+						<div class="ourfeatuers-on">
+							<p>Good Guidance</p>
+							<div class="progress ourneir thin">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" style="width: 60%;  background: #ebb445;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>
+						</div>
+						<div class="ourfeatuers-on">
+							<p>Best Hotels</p>
+							<div class="progress ourneir thin">
+								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+									aria-valuemax="100" style="width: 60%; background: #ecdc24;">
+									<span class="sr-only">60% Complete</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<!-- Services -->
+		<div class="container ">
+			<h1 class="text-center servi">Services</h2>
+				<div class="service text-center">
+					<div class="services animate__animated animate__fadeInUp">
+						<div>
+							<div style="width: 32px;height: 32px;" class="flip-container"
+								ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front cum">
+
+									</div>
+									<div class="back">
+										<img src="./img/toux-on.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="cumtxt">
+								Cum soluta
+							</div>
+						</div>
+						<h5>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut
+						</h5>
+					</div>
+					<div class="services animate__animated animate__fadeInUp">
+						<div>
+							<div style="width: 32px;height: 36px;" class="flip-container"
+								ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front nobis">
+
+									</div>
+									<div class="back">
+										<img src="./img/feiji-on.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="nobistxt">
+								Nobis esgendi
+							</div>
+						</div>
+						<h5>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut
+						</h5>
+					</div>
+					<div class="services animate__animated animate__fadeInUp">
+						<div>
+							<div style="width: 32px;height: 32px;" class="flip-container"
+								ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front est">
+
+									</div>
+									<div class="back">
+										<img src="./img/zan-on.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="esttxt">
+								Est eligendi
+							</div>
+						</div>
+						<h5>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut
+						</h5>
+					</div>
+				</div>
+				<div class="service text-center">
+					<div class="services animate__animated animate__fadeInUp">
+						<div>
+							<div style="width: 32px;height: 32px;" class="flip-container"
+								ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front soluta">
+
+									</div>
+									<div class="back">
+										<img src="./img/daoc-on.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="solutatxt">
+								Soluta nobis
+							</div>
+						</div>
+						<h5>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut
+						</h5>
+					</div>
+					<div class="services animate__animated animate__fadeInUp">
+						<div>
+							<div style="width: 32px;height: 32px;" class="flip-container"
+								ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front msoluta">
+
+									</div>
+									<div class="back">
+										<img src="./img/lianj-on.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="msolutatxt">
+								Msoluta est
+							</div>
+						</div>
+						<h5>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut
+						</h5>
+					</div>
+					<div class="services animate__animated animate__fadeInUp">
+						<div>
+							<div style="width: 32px;height: 32px;" class="flip-container"
+								ontouchstart="this.classList.toggle('hover');">
+								<div class="flipper">
+									<div class="front nobises">
+
+									</div>
+									<div class="back">
+										<img src="./img/lu-on.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="nobisestxt">
+								Nobis estli
+							</div>
+						</div>
+						<h5>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur aut
+						</h5>
+					</div>
+				</div>
+		</div>
+
+		<!-- Meet Our Team -->
+		<div class="meetourteam">
+			<div id="meetour" class="container meetour text-center">
+				<h1 class="text-center animate__animated animate__fadeInDown">
+					Meet Our Team
+				</h1>
+				<div id="meet">
+					<div class="meet">
+						<div class="meet-list">
+							<h2>Mark Sophia</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t1.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Michael amet</h2>
+							<p>Consectetur adipi lorem ipsum dolor sit amet, est eligendi scing elit consectetur</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t2.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Daniel Nyari</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t3.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Alan Joshua</h2>
+							<p>Eligendi scing elit lorem ipsum dolor sit amet, consectetur dolore magnam aliquam</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t4.jpg" alt="">
+						</div>
+					</div>
+					<div class="meet">
+						<div class="meet-list">
+							<h2>Mark Smith</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t5.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Matthew Ava</h2>
+							<p>Consectetur adipi lorem ipsum dolor sit amet, est eligendi scing elit consectetur.</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t6.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Daniel Nyari</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t7.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Mark Sophia</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t1.jpg" alt="">
+						</div>
+					</div>
+					<div class="meet">
+						<div class="meet-list">
+							<h2>Mark Sophia</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t2.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Alan Joshua</h2>
+							<p>Eligendi scing elit lorem ipsum dolor sit amet, consectetur dolore magnam aliquam</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t5.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Daniel Nyari</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipi est eligendi scing elit consectetur.</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t3.jpg" alt="">
+						</div>
+						<div class="meet-list">
+							<h2>Alan ipsum</h2>
+							<p>Eligendi scing elit lorem ipsum dolor sit amet, consectetur dolore magnam aliquam</p>
+							<div class="meet-icn">
+								<div>
+									<a href="#" class="meet-niao"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-bf"></a>
+								</div>
+								<div>
+									<a href="#" class="meet-gj"></a>
+								</div>
+							</div>
+							<img class="meet-img" src="./img/t6.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<span title="1" style="width:10px;height: 10px;display: inline-block; border-radius: 10px;"></span>
+				<span title="2" style="width:10px;height: 10px;display: inline-block; border-radius: 10px;"></span>
+				<span title="3" style="width:10px;height: 10px;display: inline-block; border-radius: 10px;"></span>
+			</div>
+
+		</div>
+
+		<div class="container portxfolio">
+			<h1 class="text-center">Portfolio</h1>
+			<div>
+				<!-- <p>ALL</p>
+				<p>CHILDREN</p>
+				<p>VACATION</p>
+				<p>HONEYMOON</p>
+				<p>CELEBRATIONS</p> -->
+				<div>
+
+					<!-- Nav tabs -->
+					<ul class="portfoli nav-tabs text-center" role="tablist">
+						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+								data-toggle="tab">ALL</a></li>
+						<li role="presentation"><a href="#profile" role="tab" data-toggle="tab">CHILDREN</a></li>
+						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+								data-toggle="tab">VACATION</a></li>
+						<li role="presentation"><a href="#honeyoon" aria-controls="honeyoon" role="tab"
+								data-toggle="tab">HONEYMOON</a></li>
+						<li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+								data-toggle="tab">CELEBRATIONS</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div>
+								<div class="port">
+									<div class="port-fada">
+										<img class="port-img animate__animated animate__zoomIn animate__faster	600ms"
+											src="./img/g1.jpg" alt="">
+										<div class="port-tet">
+											<p>Top Vacations</p>
+										</div>
+									</div >
+
+									<div>
+										<img class="port-img animate__animated animate__zoomIn animate__fast	100ms" src="./img/g2.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+									<div>
+										<img class="port-img animate__animated animate__zoomIn animate__fast	100ms" src="./img/g3.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+								</div>
+								<div class="port">
+									<div class="imgmax">
+										<img class="port-imgmax animate__animated animate__zoomIn animate__slow	1" src="./img/g4.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+									<div>
+										<img class="port-img animate__animated animate__zoomIn animate__fast	1500ms" src="./img/g5.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+								</div>
+								<div class="port">
+									<div>
+										<img class="port-img animate__animated animate__zoomIn animate__fast	1000ms" src="./img/g7.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+									<div class="imgmax">
+										<img class="port-imgmax animate__animated animate__zoomIn animate__fast	1500ms" src="./img/g6.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="profile">
+							<div>
+
+								<div class="port">
+									<div class=" class="imgmax"">
+										<img class="port-imgmax animate__animated animate__zoomIn animate__slow 2s" src="./img/g4.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+									<div>
+										<img class="port-img animate__animated animate__zoomIn animate__slower	3s" src="./img/g5.jpg" alt="">
+											<div class="port-tet">
+												<p>Top Vacations</p>
+											</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="messages">
+							<div class="port">
+								<div>
+									<img class="port-img animate__animated animate__zoomIn animate__slow 2s" src="./img/g4.jpg" alt="">
+										<div class="port-tet">
+											<p>Top Vacations</p>
+										</div>
+								</div>
+								<div class="imgmax">
+									<img class="port-imgmax animate__animated animate__zoomIn animate__slower	3s" src="./img/g3.jpg" alt="">
+										<div class="port-tet">
+											<p>Top Vacations</p>
+										</div>
+								</div>
+							</div>
+
+						</div>
+						<div role="tabpanel" class="tab-pane" id="honeyoon">
+							<div class="port">
+								<div>
+									<img class="port-img animate__animated animate__zoomIn animate__slow 1s" src="./img/g1.jpg" alt="">
+										<div class="port-tet">
+											<p>Top Vacations</p>
+										</div>
+								</div>
+								<div class="imgmax">
+									<img class="port-imgmax animate__animated animate__zoomIn animate__slower 3s" src="./img/g6.jpg" alt="">
+										<div class="port-tet">
+											<p>Top Vacations</p>
+										</div>
+								</div>
+							</div>
+
+						</div>
+						<div role="tabpanel" class="tab-pane" id="settings">
+							<div class="port">
+								<div>
+									<img class="port-img animate__animated animate__zoomIn animate__slow 2s" src="./img/g7.jpg" alt="">
+										<div class="port-tet">
+											<p>Top Vacations</p>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="late">
+			<div class="container latest text-center">
+				<div>
+					<a href="#"></a>
+				</div>
+
+				<h4>LATEST FROM TWITTER</h4>
+				<div></div>
+				<div class="latest-on">
+					<div class="latestfrom">Libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo
+						minus id quod maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod
+						maxime placeat facere possimus.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container contact text-center">
+			<h1>Contact Us</h1>
+			<div>
+				<p>Sed ut turpis elit ullamcorper in auctor non, accumsan vel lacus nulla auctor cursus nunc.
+						Maecenas ultricies dolor in urna tempus, id egestas erat finibus interdum lectus eget
+						scelerisque.</p>
+			</div>
+			<div class="contactinput">
+				<form action="">
+					<div class="contact-ipt">
+						<input type="text" required placeholder="Name">
+						<input type="text" required placeholder="Email">
+					</div>
+					<div class="contact-ipton">
+						<input type="text" required placeholder="Phone">
+					</div>
+					<div class="contact-textarea">
+						<textarea required placeholder="Message"></textarea>
+					</div>
+					<button type="submit" class="contact-btn" value="SUBMIT">SUBMIT</button>
+				</form>
+			</div>
+
+		</div>
+		<div class=" lianxi">
+			<div class="container text-center">
+				<span><img src="./img/dingw.png" alt="">Broome St, Canada, NY 10002, USA</span>
+				<span><i>Call Us :</i> +01 111 222 3333</span>
+				<span><img class="youx" src="./img/youx.png" alt=""> mail@example.com</span>
+			</div>
+
+		</div>
+		<div class=" lntera" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			<p>
+			  lnteractive Route Map
+				<img class="lntera-img1" src="./img/xia.png" alt="">
+			</p>
+			<div class="collapse" id="collapseExample">
+			  <div class="well">
+			    ...
+			  </div>
+			</div>
+			<!-- <div class="lntera-bt">
+				<button class="btn btn-primary container lntera-bt text-center" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					<span>lnteractive Route Map</span>
+				</button>
+				<div class="collapse lntera-nr" id="collapseExample">
+				  <div class="well">
+				    ...
+				  </div>
+				</div> -->
+		</div>
+		<footer class="vacation">
+			<div class="container text-center">
+				<h1>Vacation</h1>
+				<span>Copyright © 2016.Company name All rights reserved. <a href="#">网页模板</a></span>
+				<div class="vacation-on">
+					<div>
+						<a href="#" class="niao"></a>
+					</div>
+					<div>
+						<a href="#" class="bf"></a>
+					</div>
+					<div>
+						<a href="#" class="gj"></a>
+					</div>
+					<div>
+						<a href="#" class="qiu"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="./bootstrap.min.js"></script>
+	</body>
+</html>
