@@ -1,0 +1,1323 @@
+/* mix-width 1400 */
+			@media (max-width:1400px) {
+				.toubu {
+					min-height: 750px;
+				}
+
+				.guando {
+					top: 130px;
+				}
+				.item{
+					margin-top: 60px;
+				}
+				.item p {
+					font-size: 2.2em;
+				}
+
+				.item h5 {
+					margin: 0 70px;
+					font-size: 1.1em;
+				}
+			}
+			/*  max-width 1300 */
+			@media (max-width:1300px) {
+				.toubu {
+					min-height: 750px;
+				}
+			
+				.guando {
+					top: 120px;
+				}
+				.item{
+					margin-top: 50px;
+				}
+				.item p {
+					font-size: 2.1em;
+				}
+			
+				.item h5 {
+					margin: 0 70px;
+					font-size: 1em;
+				}
+				.about h4{
+					width: 750px;
+					padding-bottom: .8em;
+					font-size: 1.2em;
+				}
+				/* .port{
+					transform: scale(.9);
+					-webkit-transform: scale(.9);
+				} */
+			}
+			
+			/* mix-width 1200 */
+			@media (max-width:1200px) {
+				.toubu {
+					min-height: 700px;
+				}
+
+				.guando {
+					top: 110px;
+				}
+				.item{
+					margin-top: 40px;
+				}
+				.item p {
+					font-size: 2.2em;
+				}
+
+				.item h5 {
+					margin: 0 60px;
+					font-size: .9em;
+				}
+				.moerabout{
+					width: 9em;
+					height: 2.8em;
+					margin:130px auto 0 auto ;
+				}
+				.about {
+					padding: 2.2em;
+				}
+				.meet{
+					width: 900px;
+				}
+				.meet-list{
+					width: 200px;
+					height: 260px;
+				}
+
+				.port .port-fada, .port .port-img,  .port .port-tet {
+					width:273px;
+					height:270px;
+				}
+				 .port .imgmax,.port .port-imgmax{
+					width:590px ;
+					height: 270px;
+				}
+			}
+
+			/* mix-width 1100 */
+			@media (max-width:1100px) {
+				.toubu {
+					min-height: 650px;
+				}
+
+				.guando {
+					top: 100px;
+				}
+				.item{
+					margin-top: 35px;
+				}
+				.item p {
+					font-size: 1.8em;
+				}
+
+				.item h5 {
+					margin: 0 40px;
+					font-size: .9em;
+				}
+				.guando-on {
+					width: 45%;
+					height: 50%;
+				}
+				.moerabout{
+					width: 9em;
+					height: 2.8em;
+				}
+				.pervimg {
+					left: 12%;
+					
+				}
+				
+				.nextimg {
+					right: 12%;
+				
+				}
+				.about{
+					padding: 1.9em;
+				}
+				.about h4{
+					width: 700px;
+					
+					padding-bottom: .7em;
+					font-size: 1em;
+				}
+				.about h5{
+					width: 700px;
+					height: 60px;
+					padding-top: .9em;
+				}
+				.abottup{
+					transform: scale(.8);
+				}
+				.hangao{
+					margin: 17px;
+				}
+				.our{
+					padding:50px 0 ;
+				}
+				.our-on{
+					margin: 0;
+					width: 100%;
+					margin:0 20px ;
+				}
+				.ourneir{
+					height: 7px;
+					
+				}
+				.servi{
+					padding:40px;
+				}
+				.meet{
+					width: 900px;
+
+				}
+			}
+			/* max-width:1000 */
+			@media (max-width:1000px) {
+				#meet{
+					display: flex;
+					justify-content:center;
+				}
+				.meet{
+					width: 800px;
+				}
+				.meet-list{
+					width: 190px;
+					height: 240px;
+				}
+				
+				.meetour{
+					height: 480px;
+				}
+				.meetour h1{
+					margin:1.2em ;
+				}
+				.portxfolio{
+					width: 880px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-bottom: 3em;
+				}
+				.portxfolio h1{
+					margin: 4% 0;
+				}
+				.portx-wit{
+					width: 880px;
+				}
+				.port .port-fada, .port .port-img,  .port .port-tet {
+					
+					
+					
+				}
+				 .port .imgmax,.port .port-imgmax{
+					width:560px ;
+					
+				}
+			}
+			
+			/* mix-width 900 */
+			@media (max-width:900px) {
+				.toubu {
+					min-height: 600px;
+				}
+
+				.guando {
+					top: 90px;
+				}
+				.item{
+					margin-top: 50px;
+				}
+				.item p {
+					font-size: 1.8em;
+				}
+				.our{
+					padding:40px 0 ;
+				}
+				
+				.item h5 {
+					margin: 0 30px;
+					font-size: .8em;
+				}
+				.servi{
+					padding:30px;
+				}
+				.meet{
+					width: 750px;
+				}
+				.meet-list{
+					width: 170px;
+					height: 220px;
+				}
+				.portxfolio{
+					width: 780px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-bottom: 2.5em;
+				}
+				.portxfolio h1{
+					margin: 3% 0;
+				}
+				.portx-wit{
+					width: 780px;
+				}
+				.port .port-fada, .port .port-img,  .port .port-tet {
+					
+					width: 230px;
+					height: 232px;
+					
+				}
+				 .port .imgmax,.port .port-imgmax{
+					width:490px ;
+					height: 232px;
+				}
+				
+			}
+			/* max-width 850 */
+			@media (max-width:850px) {
+				.toubu {
+					min-height: 600px;
+				}
+			
+				.guando {
+					top: 90px;
+				}
+				.item{
+					margin-top: 40px;
+				}
+				.item p {
+					font-size: 1.5em;
+				}
+				
+				.item h5 {
+					margin: 0 20px;
+					font-size: .8em;
+				}
+				.moerabout{
+					transform: scale(.9);
+				}
+				.about{
+					padding: 1.6em;
+				}
+
+				.abottup{
+					transform: scale(.7);
+				}
+				.our{
+					padding:30px 0 ;
+				}
+				
+			}
+			
+			/* mix-width 800 */
+			@media (max-width:800px) {
+				.nextimg{
+					width: 40px;
+					height: 40px;
+					right: 10%;
+				}
+				.pervimg{
+					width: 40px;
+					height: 40px;
+					left: 10%;
+				}
+				.toubu {
+					min-height: 550px;
+				}
+
+				.guando {
+					top: 80px;
+				}
+
+				.item p {
+					font-size: 1.2em;
+				}
+
+				.item h5 {
+					margin: 0 20px;
+					font-size: .7em;
+				}
+				.moerabout{
+					transform: scale(.8);
+				}
+				.about{
+					padding: 1.2em;
+				}
+				.about h4{
+					width:600px ;
+				}
+				.about h5{
+					width: 600px;
+				}
+				.ourneir{
+					height: 6px;
+					
+				}
+				.ourfeatuers-on p {
+					font-size: 0.9em;
+				}
+				.servi{
+					padding:20px;
+				}
+				#meet{
+					align-items: center;
+					height: 200px;
+				}
+				.meet{
+					width: 650px;
+				}
+				.meet-list{
+					width: 140px;
+					height: 200px;
+				}
+				
+				.meetour{
+					height: 430px;
+				}
+				.meetour h1{
+					margin:.9em ;
+				}
+				.portxfolio{
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-bottom: 0;
+					
+				}
+				.portxfolio h1{
+					margin: 2.5% 0;
+				}
+				.port{
+					padding: 10px;
+				}
+				.portfoli{
+					padding: 30px;
+					margin: 0 30px;
+					height: 35px;
+					justify-content: space-between;
+
+					flex-wrap: wrap;
+				}
+				.portfoli li{
+					margin:0;
+				}
+				.portx-wit{
+					width: 700px;
+					
+				}
+				.port .port-fada, .port .port-img,  .port .port-tet ,.port-tet p{
+					
+					width: 200px;
+					height: 202px;
+					
+				}
+				.port-tet p{
+					margin:0 auto ;
+				}
+				.port-tet{
+					text-align: center;
+					font-size: .7em;
+					line-height: 202px;
+				}
+				 .port .imgmax,.port .port-imgmax ,.port .imgmax .port-tet{
+					width:430px ;
+					height: 202px;
+				}
+			}
+
+			/* mix-width 768 */
+			@media (max-width:768px) {
+				
+				.item h2 {
+					font-size: 1.6em;
+					transition: .5s;
+				}
+
+				div#bs-example-navbar-collapse-1 {
+					background: #000;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+					left: 6%;
+					width: 87%;
+					z-index: 999;
+
+
+				}
+
+				div#bs-example-navbar-collapse-1 .nav {
+					float: none;
+					display: block;
+					text-align: center;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.modal-backdrop {
+					z-index: 0;
+				}
+
+				.toubu {
+					min-height: 500px;
+				}
+
+				.guando {
+					margin-top: 20px;
+				}
+				.item{
+					margin-top: 30px;
+				}
+				.item p {
+					font-size: 1.4em;
+				}
+
+				.item h5 {
+					margin: 0 20px;
+					font-size: .6em;
+				}
+				.moerabout{
+					transform: scale(.8);
+				}
+
+				.about h4,.about h5{
+					width: 100%;
+				}
+				
+				.abottup{
+					transform: scale(.6);
+					
+				}
+				.abottup-img{
+					width: 100%;
+					height: 100%;
+				}
+				.abottup-img div{
+					
+				}
+				.abottup-img img{
+				
+				}
+				.ourfeatu-on{
+					margin-right: 30px;
+				}
+				
+				.services{
+					width: 170px;
+					height: 150px;
+				}
+				.flip-container{
+					transform: scale(.8);
+				}
+				.services .cumtxt{
+					font-size: 1em;
+				}
+				.services h5{
+					
+					font-size: .7em;
+				}
+				.latest h4{
+					transition: .5s all;
+					font-size: 1.2em;
+				}
+				.contact {
+					width: 100%;
+					padding: 30px 20px;
+				}
+				.contactus {
+					width: 100%;
+					
+				}
+				.contact h1 {
+					color: #d94f5c;
+					margin-bottom:.4em;
+				}
+				.contact div p{
+					font-size: 0.9em;
+					font-weight:bold;
+					color: #999;
+				}
+				.contactinput {
+					margin-top: 50px;
+				}
+				
+				.contact-ipt {
+					display: flex;
+					justify-content: space-between;
+				
+				}
+				.contact-ipt input:nth-child(2){
+					margin-left: 20px;
+				}
+				.contact-ipt input {
+					width: 100%;
+					height: 30px;
+					color: #999;
+					padding-left: 10px;
+					
+					margin-bottom: 30px;
+					outline: none;
+					border: none;
+					border-bottom: 1px #67625d solid;
+				}
+				
+				.contact-ipton input {
+					width: 100%;
+					height: 30px;
+					padding-left: 10px;
+					margin-bottom: 30px;
+					outline: none;
+					border: none;
+					border-bottom: 1px #67625d solid;
+				}
+				.contact-btn {
+					width: 150px;
+					height: 40px;
+					background: #E3535D;
+					border: 2px #E3535D solid;
+					outline: none;
+					color: #fff;
+					font-size: 1em;
+					transition: .5s all;
+				}
+				
+
+				
+			}
+
+			/* mix-width 700 */
+			@media (max-width:700px) {
+				.toubu {
+					min-height: 450px;
+				}
+				.item{
+					margin-top: 20px;
+				}
+				.item p {
+					font-size: 1.2em;
+				}
+
+				.guando {
+					
+				}
+				.moerabout{
+					transform: scale(.8);
+				}
+				.about{
+					margin-top: 0;
+				}
+				#meet{
+					align-items: center;
+					height: 200px;
+				}
+				.meet{
+					width: 550px;
+				}
+				.meet-list{
+					width: 120px;
+					height: 180px;
+				}
+				
+				.meetour{
+					height: 430px;
+				}
+				.meetour h1{
+					margin:.9em ;
+				}
+				
+				.portxfolio{
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					
+					align-items: center;
+					margin-bottom: 0;
+					 transition: all .5s;
+					 -webkit-transition: all .5s;
+				}
+				.portxfolio h1{
+					margin: 1.5% 0;
+					font-size: 2.5em;
+				}
+				.port{
+					padding: 10px;
+				}
+				.portfoli{
+					height: ;
+					padding: 0;
+					margin: 0 60px;
+					justify-content: space-around;
+					flex-wrap: wrap;
+				}
+				.portfoli li{
+					margin:0;
+				}
+				.portx-wit{
+					width: 600px;
+					
+				}
+				.port .port-fada, .port .port-img,  .port .port-tet ,.port-tet p{
+					
+					width: 160px;
+					height: 162px;
+					
+				}
+				.port-tet p{
+					margin:0 auto ;
+				}
+				.port-tet{
+					text-align: center;
+					font-size: .5em;
+					line-height: 162px;
+				}
+				 .port .imgmax,.port .port-imgmax ,.port .imgmax .port-tet{
+					width:360px ;
+					height: 162px;
+				}
+				.lianxi{
+					height: 100px;
+				}
+				.lianxi .container{
+					padding: 0;
+				}
+				.lianxi-on{
+					width:100%;
+					height: 100px;
+					display: flex;
+					flex-wrap: wrap;
+					position: relative;
+				}
+				.lianxi-on span{
+					height: 30px;
+					line-height: 30px;
+					display: block;
+				}
+				.lianxi-on span:nth-child(3){
+					width:100% ;
+					padding-right: 300px;
+				}
+				
+			}
+
+			/* mix-width 650 */
+			@media (max-width:650px) {
+				.toubu {
+					min-height: 400px;
+				}
+
+				.item p {
+					font-size: 1em;
+				}
+
+				.guando {
+					margin-top: 2px;
+				}
+				.about{
+					height: 400px;
+				}
+			}
+			/* max-width 620  */
+			@media (max-width:620px) {
+				.abottup{
+					transform: scale(.5);
+				}
+			}
+			
+
+			/* mix-width 600 */
+			@media (max-width:600px) {
+				.toubu {
+					min-height: 360px;
+				}
+				.guando {
+					margin-top: 2px;
+					height: 280px;
+				}
+				.item{
+					margin-top: 10px;
+				}
+				.item p {
+					font-size: .9em;
+				}
+				
+				.item h5 {
+					margin: 0 20px;
+					font-size: .em;
+				}
+				.guando-on {
+					width: 60%;
+					height: 45%;
+					
+				}
+				.moerabout{
+					margin:80px auto 0 auto ;
+				}
+				.serviclist{
+					height: 400px;
+				}
+				.services{
+					width: 140px;
+					height: 130px;
+				}
+				.meet{
+					width: 510px;
+				}
+				.meet-list{
+					width: 110px;
+					height: 165px;
+				}
+				
+				.meetour{
+					height: 430px;
+				}
+				.meetour h1{
+					margin:.9em ;
+				}
+				.portxfolio{
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					
+					align-items: center;
+					margin-bottom: 0;
+					 transition: all .5s;
+					 -webkit-transition: all .5s;
+				}
+				.portxfolio h1{
+					height: 70px;
+					line-height: 70px;
+					margin: 1.5% 0 ;
+					font-size: 2.8em;
+				}
+				.port{
+					padding: 5px;
+				}
+				.portfoli{
+					height:1em ;
+					padding: 0;
+					margin: 0 60px;
+					height: 50px;
+					justify-content: space-around;
+					flex-wrap: wrap;
+					height: 30px;
+				}
+				.portfoli li{
+					margin:0;
+					
+				}
+				.portx-wit{
+					width: 430px;
+					height: 100% ;
+				}
+				.tab-content{
+					
+
+				}
+				.tab-pane{
+					padding: 5px;
+
+				}
+				.port .port-fada, .port .port-img,  .port .port-tet ,.port-tet p{
+					
+					width: 120px;
+					height: 122px;
+					
+				}
+				.port-tet p{
+					margin:0 auto ;
+				}
+				.port-tet{
+					text-align: center;
+					font-size: .5em;
+					line-height: 122px;
+				}
+				 .port .imgmax,.port .port-imgmax ,.port .imgmax .port-tet{
+					width:265px ;
+					height: 122px;
+				}
+			}
+			/* max-width  550 */
+			@media (max-width:550px) {
+				.nextimg{
+					width: 35px;
+					height: 35px;
+				}
+				.pervimg{
+					width: 35px;
+					height: 35px;
+				}
+				.toubu {
+					min-height: 360px;
+				}
+				.guando-on {
+					width: 60%;
+					height: 45%;
+				}
+				.about{
+					height: 400px;
+				}
+				.abottup{
+					width: 205%;
+					transform: scale(.5);
+				}
+				.abottup-img{
+					width: 100%;
+					height: 100%;
+					
+				}
+				.serviclist{
+					height: 500px;
+				}
+				.service{
+					margin-top: 40px;
+				}
+				.services{
+					width: 150px;
+					height: 130px;
+				}
+				.flip-container{
+					transform: scale(.6);
+				}
+				.services .cumtxt{
+					font-size: .8em;
+				}
+				.services h5{
+					
+					font-size: .7em;
+				}
+				
+				.contact {
+					padding: 0;
+
+				}
+				.contactus {
+					transform: scale(.9);
+					transition: .5s all;
+				}
+				.contact h1 {
+					color: #d94f5c;
+					margin-bottom:.em;
+				}
+				.contactinput{
+					margin-top:40px;
+				}
+				.contact-ipt input {
+					width: 100%;
+					height: 30px;
+					color: #999;
+					padding-left: 10px;
+					
+					margin-bottom: 20px;
+					outline: none;
+					border: none;
+					border-bottom: 1px #67625d solid;
+				}
+				
+				.contact-ipton input {
+					width: 100%;
+					height: 30px;
+					padding-left: 10px;
+					margin-bottom: 20px;
+					outline: none;
+					border: none;
+					border-bottom: 1px #67625d solid;
+				}
+				.contact-btn {
+					width: 110px;
+					height: 35px;
+					background: #E3535D;
+					border: 2px #E3535D solid;
+					outline: none;
+					color: #fff;
+					font-size: 1em;
+					transition: .5s all;
+				}
+				.lianxi-on{
+					width:100%;
+					height: 90px;
+					display: flex;
+					flex-wrap: nowrap;
+					flex-direction: column;
+					align-items: center;
+					font-size: .7em;
+				}
+				.lianxi-on span{
+					height: 10px;
+					line-height: 10px;
+					
+				}
+				.lianxi-on span:nth-child(3){
+					
+					width:260px;
+					padding-right: 0;
+				}
+			}
+			@media (max-width:500px) {
+				.about{
+					height: 380px;
+				}
+				.abottup{
+					width: 250%;
+					transform: scale(.4);
+				}
+				.abottup-img{
+					width: 100%;
+					height: 100%;
+					
+				}
+				.serviclist{
+
+					display: flex;
+					position: relative;
+					justify-content: space-between;
+				}
+				.servi{
+					position: absolute;
+					left: 30%;
+				}
+				.service{
+					margin-top: 120px;
+					height: 380px;
+					display: flex;
+					flex-direction: column;
+				}
+				.services{
+					width: 180px;
+					height: 100px;
+				}
+				.services:nth-child(1){
+					position: relative;	
+				}
+				.flip-container{
+					transform: scale(.8);
+					position: absolute;
+					left: 15%;
+				}
+				.services .cumtxt{
+					font-size: .8em;
+				}
+				.services h5{
+					
+					font-size: .7em;
+				}
+				.meetour{
+					height: 600px;
+				}
+				#meet{
+					align-items: center;
+					
+				}
+				.meet{
+					width: 500px;
+					display: flex;
+					margin-top: 200px;
+					justify-content: center;
+					flex-wrap: wrap-reverse;
+					
+				}
+				.meet-list{
+					width: 170px;
+					height: 200px;
+					margin: 10px;
+				}
+				.meetour h1{
+					margin:.9em ;
+					font-size: 2.5em;
+				}
+				.moerabout{
+					margin-top:100px ;
+				}
+				.guando-on {
+					width: 60%;
+					height: 150px;
+					
+				}
+			}
+			@media (max-width:450px){
+				
+				.portx-wit{
+					width: 400px;
+					height: 100% ;
+				}
+				
+				.port .port-fada, .port .port-img,  .port .port-tet ,.port-tet p{
+					
+					width: 110px;
+					height: 112px;
+					
+				}
+				.port-tet p{
+					margin:0 auto ;
+				}
+				
+				 .port .imgmax,.port .port-imgmax ,.port .imgmax .port-tet{
+					width:245px ;
+					height: 112px;
+				}
+				
+			}
+			@media (max-width:418px) {
+				.about{
+					height: 100%;
+				}
+				.abottup{
+					width: 100%;
+					height:620px ;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					transform:scale(.9);
+				}
+				.abottup-img{
+					width: 100%;
+					height: 100%;
+					
+				}
+				
+				
+				.portfoli{
+					height:1em ;
+					padding: 0;
+					margin: 0 60px;
+					height: 50px;
+					justify-content: space-around;
+					flex-wrap: wrap;
+				}
+				
+				.portx-wit{
+					width: 360px;
+					height: 100% ;
+				}
+				
+				.port .port-fada, .port .port-img,  .port .port-tet ,.port-tet p{
+					
+					width: 100px;
+					height: 102px;
+					
+				}
+				.port-tet p{
+					margin:0 auto ;
+				}
+				.port-tet{
+					text-align: center;
+					font-size: .5em;
+					line-height: 102px;
+				}
+				 .port .imgmax,.port .port-imgmax ,.port .imgmax .port-tet{
+					width:220px ;
+					height: 102px;
+				}
+				.contact {
+					padding: 0;
+				
+				}
+				.contactus {
+					transform: scale(.9);
+					transition: .5s all;
+				}
+				.contact h1 {
+					color: #d94f5c;
+					margin-bottom:.em;
+				}
+				.contactinput{
+					margin-top:30px;
+				}
+				.contact-ipt{
+					display: flex;
+					flex-direction: column;
+					
+				}
+				.contact-ipt input:nth-child(2){
+					margin-left: 0;
+				}
+				.contact-ipt input {
+					width: 100%;
+					padding-left: 10px;
+					margin-bottom: 20px;
+				}
+				
+				.contact-ipton input {
+					padding-left: 10px;
+					margin-bottom: 20px;
+				}
+				.contact-btn {
+					width: 110px;
+					height: 35px;
+				}
+			}
+			@media (max-width:478px) {
+				.nextimg{
+					width: 35px;
+					height: 35px;
+				}
+				.pervimg{
+					width: 35px;
+					height: 35px;
+				}
+			}
+			@media (max-width:400px) {
+				.nextimg{
+					width: 35px;
+					height: 35px;
+					right: 6%;
+				}
+				.pervimg{
+					width: 35px;
+					height: 35px;
+					left: 6%;
+					
+				}
+				.meetour{
+					height:1100px;
+				}
+				#meet{
+					height: 1000px;
+				}
+				.meet{
+					width: 300px;
+					display: flex;
+					margin-top: 0;
+					justify-content: center;
+					flex-wrap: wrap-reverse;
+					
+				}
+				.meet-list{
+					width: 200px;
+					height: 220px;
+					margin: 10px;
+				}
+				.meetour h1{
+					margin:.5em ;
+					font-size: 2.5em;
+				}
+				.lntera p{
+					background: #000000;
+					
+					transform: scale(.9);
+					transition: all .5s;
+				}
+				.vacation h1,.vacation-on{
+					transform: scale(.9);
+					transition: all .5s;
+				}
+			}
+			@media (max-width:360px) {
+				.our-on{
+					margin:0 5px;
+					padding: 5px;
+				}
+				.ourfeatu{
+					flex-direction: column;
+				}
+				.ourfeatuers{
+					width: 100%;
+					padding: 0;
+				}
+				.serviclist{
+					display: block;
+					height: 800px;
+				}
+				.servi{
+					position: initial;
+					padding:18px 0 25px 0;
+				}
+				.service{
+					margin: 0;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.services{
+					width: 270px;
+					height: 130px;
+				}
+				.services:nth-child(1){
+					position: relative;
+					
+					
+				}
+				.flip-container{
+					transform: scale(.8);
+					position: absolute;
+					left: 20%;
+				}
+				.services .cumtxt{
+					font-size: 1em;
+				}
+				.services h5{
+					width: 270px;
+					font-size: .7em;
+				}
+				.portxfolio{
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					
+					align-items: center;
+					margin-bottom: 0;
+					 transition: all .5s;
+					 -webkit-transition: all .5s;
+				}
+				.portxfolio h1{
+					margin: 1.5% 0;
+					font-size: 2.5em;
+				}
+				
+				.portfoli{
+					height: ;
+					padding: 0;
+					margin: 0 60px;
+					justify-content: space-around;
+					flex-wrap: wrap;
+				}
+				.portfoli li{
+					margin:0;
+				}
+				.portx-wit{
+					width: 350px;
+					
+				}
+				.port{
+					padding: 0;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.port .port-fada, .port .port-img,  .port .port-tet ,.port-tet p{
+					
+					width: 260px;
+					height: 262px;
+					
+				}
+				.port .port-fada{
+					margin: 5px 0;
+				}
+				.port .imgmax{
+					margin: 5px 0;
+				}
+				.imgmax .port-tet p{
+					margin:0 auto ;
+					width:260px ;
+					height: 132px;
+					line-height: 132px;
+				}
+				.port-tet{
+					text-align: center;
+					font-size: .5em;
+					line-height: 262px;
+				}
+				.port .imgmax,.port .port-imgmax ,.port .imgmax .port-tet{
+					width:260px ;
+					height: 132px;
+				}
+				.moerabout{
+					margin-top:120px ;
+				}
+				.guando-on {
+					width: 60%;
+					height: 170px;
+					
+				}
+			}
