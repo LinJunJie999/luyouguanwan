@@ -10,23 +10,26 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<style>
+			html{
+				scroll-behavior:smooth;
+			}
 			body {
 				/* font-family: "Brush Script MT", cursive; */
 				font-size: 14px;
 				transition: 1s all;
-
+				
 			}
-
+			
 			h1,
 			h2,
 			h3,
 			h4,
 			h5,
 			h6 {
+				font-family: 'FZShuTi';
 
-				font-family: 'Aladin', cursive;
 			}
-
+			
 			.navbar {
 				background: rgba(255, 255, 255, 0);
 				border: none;
@@ -4628,9 +4631,9 @@
 						<ul class="nav navbar-nav">
 							<li><a id="homes" href="#" class="col-md-2">Home</a></li>
 							<li><a href="#about" class="col-md-2">About</a></li>
-							<li><a href="#" class="col-md-2">Services</a></li>
-							<li><a href="#" class="col-md-2">Portfolio</a></li>
-							<li><a href="#" class="col-md-2">Contact</a></li>
+							<li><a href="#services" class="col-md-2">Services</a></li>
+							<li><a href="#portfolio" class="col-md-2">Portfolio</a></li>
+							<li><a href="#contactus" class="col-md-2">Contact</a></li>
 							<li>
 								<button type="button" class="bookbtn" data-toggle="modal" data-target="#myModal">
 									BookNow
@@ -4899,7 +4902,7 @@
 
 
 		<!-- Services -->
-		<div class="container serviclist">
+		<div id="services" class="container serviclist">
 			<h1 class="text-center servi">Services</h2>
 				<div class="service text-center">
 					<div class="services animate__animated animate__fadeInUp">
@@ -5028,7 +5031,7 @@
 		</div>
 
 		<!-- Meet Our Team -->
-		<div class="meetourteam">
+		<div  class="meetourteam">
 			<div id="meetour" class="container meetour text-center">
 				<h1 class="text-center animate__animated animate__fadeInDown">
 					Meet Our Team
@@ -5240,7 +5243,7 @@
 
 		</div>
 
-		<div class="container portxfolio">
+		<div id="portfolio" class="container portxfolio">
 			<h1 class="text-center">Portfolio</h1>
 			<!-- <p>ALL</p>
 				<p>CHILDREN</p>
@@ -5400,7 +5403,7 @@
 			</div>
 		</div>
 
-		<div class="container contact text-center">
+		<div id="contactus" class="container contact text-center">
 			<h1>Contact Us</h1>
 			<div class="contactus">
 				<div>
